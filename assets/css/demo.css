@@ -1002,5 +1002,12 @@ ul {
   .navbar .navbar-nav .topbar-user .profile-pic:focus, .navbar .navbar-nav .topbar-user .profile-pic:hover {
     background: transparent;
 }
-
  
+
+.chatbot--closed .message-icon{
+  display: block !important;
+ }
+
+ .chatbot.message-icon{
+  display: none;
+ }
