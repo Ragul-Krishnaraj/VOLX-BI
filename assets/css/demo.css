@@ -691,7 +691,7 @@ ul {
     align-items: center;
     justify-content: space-between;
     background-color: #292460;
-    height: 54px;
+    height: 50px;
     padding: 0 20px;
     width: 100%;
     cursor: pointer;
@@ -998,3 +998,7 @@ ul {
   animation: none;
 }
   /* chat bot css End */
+
+  .navbar .navbar-nav .topbar-user .profile-pic:focus, .navbar .navbar-nav .topbar-user .profile-pic:hover {
+    background: transparent;
+}
