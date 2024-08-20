@@ -4466,10 +4466,12 @@ label.error{
     background:#1a2035!important;
     color:#fff!important
 }
-.btn-primary{
-    background:#1572e8!important;
-    border-color:#1572e8!important
-}
+ 
+    .btn-primary {
+        background: #18243E !important;
+        border-color: #18243E !important;
+    }
+ 
 .btn-primary:disabled,.btn-primary:focus,.btn-primary:hover{
     color:#fff!important;
     background:#1572e8!important;
@@ -7146,7 +7148,7 @@ body[data-background-color=dark2] .jvm-zoom-btn,body[data-background-color=dark]
     background-color:#151a2b!important
 }
 .bg-primary{
-    background-color:#1572e8!important
+    background-color:#18243E !important
 }
 .bg-primary2{
     background-color:#1269db!important
