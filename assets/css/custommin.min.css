@@ -4857,7 +4857,6 @@ label.error{
     margin-right:-20px
 }
 .nav.nav-line .nav-link,.nav.nav-simple .nav-link{
-    padding:18px 0!important;
     margin-right:40px;
     color:#6b6d7e;
     border-width:0;
@@ -4947,13 +4946,13 @@ label.error{
     border-color:#1572e8
 }
 .nav.nav-line.nav-color-secondary .nav-link:focus,.nav.nav-line.nav-color-secondary .nav-link:hover{
-    color:#6861ce
+    color:#1a2035;
 }
 .nav.nav-line.nav-color-secondary .nav-link.active{
-    color:#6861ce
+    color:#1a2035;
 }
 .nav.nav-line.nav-color-secondary .nav-link.active{
-    border-color:#6861ce
+    border-color:#1a2035;
 }
 .nav.nav-line.nav-color-info .nav-link:focus,.nav.nav-line.nav-color-info .nav-link:hover{
     color:#48abf7
