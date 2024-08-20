@@ -682,8 +682,7 @@ ul {
   }
   .chatbot.chatbot--closed {
     top: auto;
-    width: 25%;
-  }
+   }
   
   .chatbot__header {
     color: #fff;
