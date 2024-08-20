@@ -1030,3 +1030,22 @@ ul {
 .nav-link {
   color: #18243E !important;
 } */
+
+
+.custom-select{
+  border-radius: 15px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #18243e;
+    border: solid 1px #cbced4;
+    padding: 6.5px 27.4px 6.5px 8px;
+}
+
+.page-title-box .page-title-right {
+  float: right;
+  
+}
+
+span.input-group-text.bg-primary.border-primary.text-white {
+  padding: .65rem 1.4rem;
+}
