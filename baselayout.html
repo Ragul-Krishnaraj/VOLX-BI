@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Volante Experience</title>
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+</head>
+
+<body>
+    <div class="dark-blue-bg">
+        <div class="col-md-12">
+            <div class="mb-5">
+                <nav class="navbar fixed-top navbar-expand navbar-light bg-volante">
+                    <div class="container-fluid">
+                        <a class="navbar-brand version-info-trigger">
+                            <img src="assets/img/darlogo-new.png" alt="" class="img-fluid">
+                        </a>
+                        <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                            class="navbar-toggler">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div id="navbarSupportedContent" class="collapse navbar-collapse d-flex align-items-center justify-content-end">
+                            <span id="navbar-menu" class="headerNameText" style="margin-left: auto;">Welcome,</span>
+                            <span class="material-icons-outlined account-circleicon img">account_circle</span>
+                            <button class="btn-small-exit mr-2" style="font-size: 16px !important; padding-top: 2px !important;">
+                                Logout
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="sidebar" id="mainSidebarSection">
+            <div>
+                <div class="hamburger-menu">
+                    <input type="checkbox" id="checkbox-hamburger-menu" onclick="changeSidebarState()" />
+                    <label class="label-hamburger-menu" for="checkbox-hamburger-menu">
+                        <img src="assets/img/D-Toggle1.png" class="setIcon1" alt="menuItem">
+                    </label>
+                </div>
+            </div>
+            <ul id="nav-links" class="nav-links">
+                <li id="step1-li">
+                    <div class="dropdown-title">
+                        <a href="/ftu-paas/notification-screenflow">
+                            <img alt="menuItem" class="setIcon" src="assets/img/D-Home.png">
+                            <span class="link_name">Command Center</span>
+                        </a>
+                    </div>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name">Command Center</a></li>
+                    </ul>
+                </li>
+                <li class="active" onclick="showMenu()">
+                    <div class="dropdown-title">
+                        <a>
+                            <img src="assets/img/D-Reports.png" class="setIcon" alt="menuItem" />
+                            <span class="link_name">Reports</span>
+                        </a>
+                        <i class="fa fa-angle-down arrow" id="arrow-transform"></i>
+                    </div>
+                    <ul class="sub-menu" id="listSectionForReports" style="display: none;">
+                        <li><a class="link_name">Reports</a></li>
+                        <li>
+                            <span class="d-flex">
+                                <a>
+                                    <img alt="menuItem" class="setIcon1" src="assets/img/D-allReports.png"> All Reports
+                                </a>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="d-flex">
+                                <a>
+                                    <img alt="menuItem" class="setIcon1" src="assets/img/D-Jobs.png"> Jobs
+                                </a>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="d-flex">
+                                <a>
+                                    <img alt="menuItem" class="setIcon1" src="assets/img/D-Templates.png"> Templates
+                                </a>
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="dropdown-title">
+                        <a class="dropdown-item cursorupload">
+                            <img src="assets/img/D-Volpay.png" alt="menuItem" class="setIcon">
+                            <span class="link_name">Volpay</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <div>
+                <p class="version_label version-tag-min d-none">V 1.12</p>
+                <p class="version_label version-tag-max">Version 1.12</p>
+            </div>
+        </div>
+        <section class="home-section">
+            <div class="home-view">
+                <div class="">
+                    <div class="page-inner">
+                        <div class="d-flex justify-content-between">
+                            <div class="col-md-8">
+                                <h4 class="page-title">Rename the title</h4>
+                            </div>
+                            <div class="col-md-4">
+                                <form class="d-flex">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control form-control-light" id="reportrange">
+                                        <span class="input-group-text bg-primary border-primary text-white">
+                                            <i class="far fa-calendar-alt"></i>
+                                        </span>
+                                    </div>
+                                    <a class="btn btn-primary ms-2">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="nav nav-tabs nav-line nav-color-secondary" id="line-tab" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link active" id="fedwire-home-tab" data-bs-toggle="pill" href="#fedwire-home" role="tab" aria-controls="pills-home" aria-selected="true">Fedwire</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="line-profile-tab" data-bs-toggle="pill" href="#tchtrp-profile" role="tab" aria-controls="pills-profile" aria-selected="false" tabindex="-1">TCH-RTP</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content mt-3 mb-3" id="tchtrp-tabContent">
+                                        <div class="tab-pane fade show active" id="fedwire-home" role="tabpanel" aria-labelledby="fedwire-home-tab">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <select class="form-select form-select rounded-pill" aria-label=".form-select-sm example">
+                                                        <option selected="">Bank Transfer</option>
+                                                        <option>Check Same Day Settlement</option>
+                                                        <option>Customer Transfer Plus</option>
+                                                        <option>Customer Transfer</option>
+                                                        <option>Deposit to Senders Account</option>
+                                                        <option>Drawdown Response</option>
+                                                        <option>Fed Funds Returned</option>
+                                                        <option>Fed Funds Sold</option>
+                                                        <option>Bank Transfer Reversal</option>
+                                                        <option>Customer Transfer Reversal</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-slideout">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header modal-header-custom d-flex">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                                                            <h6 class="mb-0"><b>Traffic Goal</b></h6>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                                <i class="fas fa-times text-white"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="chart-content-bg">
+                                                                <div class="row text-center">
+                                                                    <div class="col-sm-6">
+                                                                        <p class="text-muted mb-0 mt-3">Target</p>
+                                                                        <h2 class="fw-normal mb-3">
+                                                                            <span>$10,000</span>
+                                                                            <span class="badge badge-warning-lighten">Payment / Week</span>
+                                                                        </h2>
+                                                                    </div>
+                                                                    <div class="col-sm-6">
+                                                                        <p class="text-muted mb-0 mt-3">Actual</p>
+                                                                        <h2 class="fw-normal mb-3">
+                                                                            <span>$7,400</span>
+                                                                            <span class="badge badge-warning-dark">Payment / Week</span>
+                                                                            <span><i class="fas fa-arrow-down text-danger me-1 f-16"></i></span>
+                                                                            <span class="text-danger me-2 f-16">25%</span>
+                                                                        </h2>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mt-5">
+                                                                <div class="col-md-12">
+                                                                    <div class="card">
+                                                                        <div class="card-header">
+                                                                            <div class="card-title">Past Week Trends</div>
+                                                                        </div>
+                                                                        <div class="card-body">
+                                                                            <div class="chart-container">
+                                                                                <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                                                                    <div class="chartjs-size-monitor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                                                                        <div style="position: absolute; width: 1000000px; height: 1000000px; left: 0; top: 0"></div>
+                                                                                    </div>
+                                                                                    <div class="chartjs-size-monitor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                                                                        <div style="position: absolute; width: 200%; height: 200%; left: 0; top: 0"></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <!-- <canvas id="demoChartInnerVariable" height="0" class="chartjs-render-monitor" style="display: block; width: 0px; height: 0px;" width="0">
+                                                                                    <ul class="0-legend">
+                                                                                        <li><span style="background-color: transparent"></span>Actual Payment Traffic</li>
+                                                                                        <li><span style="background-color: transparent"></span>Target Benchmark</li>
+                                                                                    </ul>
+                                                                                </canvas> -->
+
+                                                                                  <canvas id="myChart">
+
+                                                                                    <ul class="0-legend">
+                                                                                        <li><span style="background-color: transparent"></span>Actual Payment Traffic</li>
+                                                                                        <li><span style="background-color: transparent"></span>Target Benchmark</li>
+                                                                                    </ul>
+                                                                                  </canvas>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row row-card-no-pd mt-3">
+                                                <div class="col-12 col-sm-6 col-md-6 col-xl-6">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="d-flex">
+                                                                <div class="flex-shrink-0">
+                                                                    <div class="avatar-sm rounded">
+                                                                        <span class="avatar-title bg-primary-lighten h3 my-0 text-primary rounded">
+                                                                            <i class="fas fa-cube text-white"></i>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex-grow-1 ms-3">
+                                                                    <h4 class="mt-0 mb-1 font-20">Inflows -- in progress</h4>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row align-items-end justify-content-between mt-3">
+                                                                
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-12 col-sm-6 col-md-6 col-xl-6">
+                                                    <div class="card">
+                                                        <div class="card-body">
+                                                            <div class="d-flex justify-content-between">
+                                                                <div>
+                                                                    <h6><b>Traffic Goals</b></h6>
+                                                                    <p class="text-muted mb-2">Difference</p>
+                                                                </div>
+                                                                <div class="d-flex align-items-end mb-3">
+                                                                    <span><i class="fas fa-arrow-down text-danger me-1"></i></span>
+                                                                    <span class="text-danger me-2">25%</span>
+                                                                    <span class="text-muted">Since last week</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="progress progress-sm">
+                                                                <div class="progress-bar bg-secondary w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between mt-2">
+                                                                <p class="text-muted mb-0">Change</p>
+                                                                <p class="text-muted mb-0">75%</p>
+                                                            </div>
+                                                            <div class="text-center">
+                                                                <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Details</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="tchtrp-profile" role="tabpanel" aria-labelledby="tchtrp-profile-tab">
+                                            <p>Data - Comes here - 2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- JS Files -->
+    <script src="assets/js/core/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/core/popper.min.js"></script>
+    <script src="assets/js/core/bootstrap.min.js"></script>
+    <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="assets/js/plugin/webfont/webfont.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+     <script src="assets/js/jquery.sparkline/jquery.sparkline.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    
+  <script>
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['W-1', 'W-2', 'W-3', 'W-4', 'W-5', 'W-6'],
+        datasets: [
+      
+        {
+        label: "Actual Payment Traffic",
+                borderColor: "#f3545d",
+                pointBorderColor: "#FFF",
+                pointBackgroundColor: "#f3545d",
+                pointBorderWidth: 2,
+                pointHoverRadius: 4,
+                pointHoverBorderWidth: 1,
+                pointRadius: 4,
+                backgroundColor: "transparent",
+                fill: true,
+                borderWidth: 2,
+                data: [0, 30, 58, 79, 90, 105, 40, 160, 185, 210, 185, 194],
+              },
+              {
+                label: "Target Benchmark",
+                borderColor: "green",
+                pointBorderColor: "#FFF",
+                pointBackgroundColor: "#f3545d",
+                pointBorderWidth: 2,
+                pointHoverRadius: 4,
+                pointHoverBorderWidth: 1,
+                pointRadius: 4,
+                backgroundColor: "transparent",
+                fill: true,
+                borderWidth: 2,
+                data: [0, 100, 58, 79, 90, 80, 117, 160, 185, 210, 185, 194],
+              }
+    ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>  
+
+ 
+
+
+
+    <script>
+        WebFont.load({
+            custom: {
+                families: ["Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"],
+                urls: ["assets/css/fonts.min.css"],
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            },
+        });
+
+        var openSidebar = false;
+
+        function changeSidebarState() {
+            openSidebar = !openSidebar;
+            if (openSidebar) {
+                document.getElementById('mainSidebarSection').classList.add('sidebar-close');
+            } else {
+                document.getElementById('mainSidebarSection').classList.remove('sidebar-close');
+            }
+        }
+
+        function showMenu() {
+            
+            var ele = document.getElementById('listSectionForReports');
+            
+            if (ele.style.display == 'block') {
+                ele.style.display = 'none';
+                document.getElementById('arrow-transform').style.transform = 'rotate(0deg)';
+            } 
+            else {
+                ele.style.display = 'block';
+                document.getElementById('arrow-transform').style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+
+ 
+<script type="text/javascript">
+    $(function () {
+            var start = moment().subtract(29, "days");
+            var end = moment();
+
+            function cb(start, end) {
+                $("#reportrange span").html(start.format("MMMM D, YYYY") + " - " + end.format("MMMM D, YYYY"));
+            }
+
+            $("#reportrange").daterangepicker(
+                {
+                    startDate: start,
+                    endDate: end,
+                    ranges: {
+                        Today: [moment(), moment()],
+                        Yesterday: [moment().subtract(1, "days"), moment().subtract(1, "days")],
+                        "Last 7 Days": [moment().subtract(6, "days"), moment()],
+                        "Last 30 Days": [moment().subtract(29, "days"), moment()],
+                        "This Month": [moment().startOf("month"), moment().endOf("month")],
+                        "Last Month": [moment().subtract(1, "month").startOf("month"), moment().subtract(1, "month").endOf("month")],
+                    },
+                },
+                cb
+            );
+
+            cb(start, end);
+        });
+</script>
+ 
+
+
+
+</body>
+
+</html>
