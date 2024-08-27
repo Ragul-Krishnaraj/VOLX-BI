@@ -65,7 +65,7 @@
                         <li><a class="link_name">Command Center</a></li>
                     </ul>
                 </li>
-                <li class="active" onclick="showMenu()">
+                <li onclick="showMenu()">
                     <div class="dropdown-title">
                         <a>
                             <img src="assets/img/D-Reports.png" class="setIcon" alt="menuItem" />
@@ -98,6 +98,50 @@
                         </li>
                     </ul>
                 </li>
+
+                <li class="active" onclick="showMenu2()" >
+                    <div class="dropdown-title">
+                        <a>
+                            <img src="assets/img/D-Reports.png" class="setIcon" alt="menuItem" />
+                            <span class="link_name">Business Insights</span>
+                        </a>
+                        <i class="fa fa-angle-down arrow" id="arrow-transforms"></i>
+                    </div>
+                    <ul class="sub-menu" id="listSectionForReportss" style="display: block;">
+                         <li class="active">
+                            <span class="d-flex">
+                                <a>
+                                    <img alt="menuItem" class="setIcon" src="assets/img/payment-flows.png"> Payment Flows
+                                </a>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="d-flex">
+                                <a>
+                                    <img alt="menuItem" class="setIcon" src="assets/img/Exception-management.png"> Exception Management 
+                                </a>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="d-flex">
+                                <a>
+                                    <img alt="menuItem" class="setIcon" src="assets/img/Services.png"> Ancilary Services
+                                </a>
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="d-flex">
+                                <a>
+                                    <img alt="menuItem" class="setIcon" src="assets/img/channel.png"> Channels
+                                </a>
+                            </span>
+                        </li>
+
+                    </ul>
+                </li>
+
+
                 <li>
                     <div class="dropdown-title">
                         <a class="dropdown-item cursorupload">
@@ -118,7 +162,7 @@
                     <div class="page-inner">
                         <div class="d-flex justify-content-between">
                             <div class="col-md-8">
-                                <h4 class="page-title">Rename the title</h4>
+                                <h4 class="page-title">Payment Flows</h4>
                             </div>
                             <div class="col-md-4">
                                 <form class="d-flex">
@@ -399,6 +443,20 @@
             else {
                 ele.style.display = 'block';
                 document.getElementById('arrow-transform').style.transform = 'rotate(180deg)';
+            }
+        }
+
+        function showMenu2() {
+            
+            var ele = document.getElementById('listSectionForReportss');
+            
+            if (ele.style.display == 'block') {
+                ele.style.display = 'none';
+                document.getElementById('arrow-transforms').style.transform = 'rotate(0deg)';
+            } 
+            else {
+                ele.style.display = 'block';
+                document.getElementById('arrow-transforms').style.transform = 'rotate(180deg)';
             }
         }
     </script>
