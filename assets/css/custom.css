@@ -900,14 +900,14 @@ label:active:after {
 }
 .sidebar.sidebar-close .nav-links li .sub-menu li {
   padding: 6px 15px;
-  width: 200px;
+  width: 232px;
 }
 .sidebar.sidebar-close .nav-links li:hover .sub-menu {
   top: 0;
   opacity: 1;
   pointer-events: auto;
   transition: all 0.4s ease;
-  width: 177.8px;
+  width: 232.8px;
   height: auto;
   border-radius: 3.5px;
   border: solid 1px #003b7c;
@@ -1408,7 +1408,7 @@ background: #f5f7fd;
 .card .card-footer,.card-light .card-footer{
   background-color:transparent;
   line-height:30px;
-  border-top:1px solid #ebecec!important;
+  /* border-top:1px solid #ebecec!important; */
   font-size:13px
 }
 .card .pull-in,.card-light .pull-in{
@@ -2384,8 +2384,30 @@ a {
   height: fit-content !important;
 }
 
-.sidebar.sidebar-close #arrow-transform{
+.sidebar.sidebar-close #arrow-transform , #arrow-transforms {
   display: none !important;
 }
  
+ 
+
+/* payment flows cards */
+
+.card-profile .user-stats .number {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.card-profile .user-stats {
+  margin-bottom: 10px;
+}
+
+
+.card-profile {
+  color: #2a2f5b;
+}
+
+.card-profile .user-stats [class^=col] {
+  border-right: 1px solid #ebebeb;
+}
+
  
