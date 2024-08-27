@@ -2402,12 +2402,4 @@ a {
 }
 
 
-.card-profile {
-  color: #2a2f5b;
-}
-
-.card-profile .user-stats [class^=col] {
-  border-right: 1px solid #ebebeb;
-}
-
  
