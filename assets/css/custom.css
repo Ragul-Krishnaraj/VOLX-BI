@@ -2384,9 +2384,15 @@ a {
   height: fit-content !important;
 }
 
-.sidebar.sidebar-close #arrow-transform , #arrow-transforms {
+.sidebar.sidebar-close #arrow-transform {
   display: none !important;
 }
+ 
+
+.sidebar.sidebar-close #arrow-transforms {
+  display: none !important;
+}
+ 
  
  
 
