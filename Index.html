@@ -353,14 +353,52 @@
                                                 
                                                 
                                                         </div>
-                                                        <div class="col-12 col-sm-6 col-md-6 col-xl-12">
+                                                        <!-- <div class="col-12 col-sm-6 col-md-6 col-xl-12">
                                                 
                                                 
                                                 
-                                                           <p class="text-danger"> In - Progress . . . </p>
+                                                            <img class="setIcon benchmark-iconstyle" src="assets/img/tune.png">
+
                                                 
                                                 
-                                                        </div>
+                                                        </div> -->
+
+
+
+                                                          
+                        <div class="col-md-12">
+                            <ul class="nav nav-tabs nav-line nav-color-secondary" id="line-tab" role="tablist">
+                               <li class="nav-item" role="presentation">
+                                   <a class="nav-link active" id="top-transfers-tab" data-bs-toggle="pill" href="#top-transfers" role="tab" aria-controls="pills-home" aria-selected="true">Top Transfers</a>
+                               </li>
+                               <li class="nav-item" role="presentation">
+                                   <a class="nav-link" id="line-profile-tab" data-bs-toggle="pill" href="#top-parties" role="tab" aria-controls="pills-profile" aria-selected="false" tabindex="-1">Top Parties</a>
+                               </li>
+                               <li class="nav-item" role="presentation">
+                                   <img class="setIcon benchmark-iconstyle" src="assets/img/tune.png">
+
+                                </li>
+
+
+
+                           </ul>
+                           <div class="tab-content mt-3 mb-3" id="top-parties-tabContent">
+                               <div class="tab-pane fade show active" id="top-transfers" role="tabpanel" aria-labelledby="top-transfers-tab">
+                                   <div class="d-flex justify-content-between align-items-center">
+                                       
+
+                                       <p>Data - Comes here - 1</p>
+                                   </div>
+                                   
+                                
+                               </div>
+                               <div class="tab-pane fade" id="top-parties" role="tabpanel" aria-labelledby="top-parties-tab">
+                                   <p>Data - Comes here - 2</p>
+                               </div>
+                           </div>
+                 </div>
+
+                 
                                                     </div>
                                                 </div>
                                                 <div class="col-4">
@@ -528,19 +566,17 @@
             {
               label: "Traffic",
               borderColor: "#1d7af3",
+              backgroundColor: "transparent",
+              data: [0, 1, 2, 3],
               pointBorderColor: "#FFF",
               pointBackgroundColor: "#1d7af3",
               pointBorderWidth: 2,
               pointHoverRadius: 4,
               pointHoverBorderWidth: 1,
               pointRadius: 4,
-              backgroundColor: "transparent",
               fill: true,
               borderWidth: 2,
-              data: [30, 45, 45, 68, 69, 90, 100],
-            },
-             
-             
+            }             
           ],
         },
         options: {
@@ -561,70 +597,111 @@
           layout: {
             padding: { left: 15, right: 15, top: 15, bottom: 15 },
           },
+          scales : {
+            x : {
+                position : 'top'
+            }, 
+            y : {
+                ticks : {
+                    callback : function(value, index, ticks) {
+                        if (value == 0) return 'Processed';
+                        if (value == 1) return 'Returned';
+                        if (value == 2) return 'Rejected';
+                        if (value == 3) return 'NAK'
+                    },
+                    autoSkip : false
+
+                },
+                grid: {
+                    display: true, // Shows the grid lines
+                    drawBorder: false, // Hides the border
+                    color: 'rgba(255, 99, 132, 0.2)', // Color of grid lines
+                    lineWidth: 1, // Width of grid lines
+                    borderDash: [5, 30], // Dashed grid lines, if desired
+                },
+            }
+          },
+          plugins : {
+            legend : {
+                display : false
+            }
+          }
         },
       });
 
+    
+
+
+
 
       var myMultipleBarChart = new Chart(multipleBarChart, {
-        type: "bar",
-        data: {
-          labels: [
-            "Jan",
-            "Feb",
-           ],
-          datasets: [
-            {
-              label: "First time visitors",
-              backgroundColor: "#59d05d",
-              borderColor: "#59d05d",
-              data: [95, 100, 112, 101, 144, 159, 178, 156, 188, 190, 210, 245],
+        type: 'bar',
+            data: {
+                labels: ['0', '200', '400', '600', '800'],
+                datasets: [
+                        {
+                        label: "First time visitors",
+                        backgroundColor: "#59d05d",
+                        borderColor: "#59d05d",
+                        data: [-3, -10, -18, -24, -10],
+                        },
+                        {
+                        label: "Visitors",
+                        backgroundColor: "#fdaf4b",
+                        borderColor: "#fdaf4b",
+                        data: [-10, -20, -13, -18, -4],
+                        },
+                        {
+                        label: "Pageview",
+                        backgroundColor: "#177dff",
+                        borderColor: "#177dff",
+                        data: [5, 2, 15, 24, 12, 6, 12],
+                        },
+                    ],
             },
-            {
-              label: "Visitors",
-              backgroundColor: "#fdaf4b",
-              borderColor: "#fdaf4b",
-              data: [
-                145, 256, 244, 233, 210, 279, 287, 253, 287, 299, 312, 356,
-              ],
-            },
-            {
-              label: "Pageview",
-              backgroundColor: "#177dff",
-              borderColor: "#177dff",
-              data: [
-                185, 279, 273, 287, 234, 312, 322, 286, 301, 320, 346, 399,
-              ],
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          legend: {
-            position: "bottom",
-          },
-          title: {
-            display: true,
-            text: "Traffic Stats",
-          },
-          tooltips: {
-            mode: "index",
-            intersect: false,
-          },
-          responsive: true,
-          scales: {
-            xAxes: [
-              {
-                stacked: true,
-              },
-            ],
-            yAxes: [
-              {
-                stacked: true,
-              },
-            ],
-          },
-        },
+            options: {
+                plugins : {
+                    legend : {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        position : 'top',
+                        grid : {
+                            display : false
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            callback: function(value, index, ticks) {
+                                // Custom labels based on the value (nagative value for the chart)
+                                if (value >= -24 && value <= -21) return '9 PM - 12 AM';
+                                if (value > -21 && value <= -18) return '6 PM - 9 PM';
+                                if (value > -18 && value <= -15) return '3 PM - 6 PM';
+                                if (value > -15 && value <= -12) return '12 PM - 3 PM';
+                                if (value > -12 && value <= -9) return '9 AM - 12 PM';
+                                if (value > -9 && value <= -6) return '6 AM - 9 AM';
+                                if (value > -6 && value <= -3) return '3 AM - 6 AM';
+                                if (value > -3 && value <= 0) return '12 AM - 3 AM';
+                                if(value < -24) return 'MIN';
+                                // (positive value for the chart)
+                                if (value > 0 && value <= 3) return '0 AM - 3 AM';
+                                if (value > 3 && value <= 6) return '3 AM - 6 AM';
+                                if (value > 6 && value <= 9) return '6 AM - 9 AM';
+                                if (value > 9 && value <= 12) return '9 AM - 12 PM';
+                                if (value > 12 && value <= 15) return '12 PM - 3 PM';
+                                if (value > 15 && value <= 18) return '3 PM - 6 PM';
+                                if (value > 18 && value <= 21) return '6 PM - 9 PM';
+                                if (value > 21 && value <= 24) return '9 PM - 12 AM';
+                                return 'MAX'; // Return empty string for values outside defined ranges
+                            },
+                            beginAtZero: true,
+                            autoSkip : false
+                        }
+                    }
+                }
+            }
       });
 
     </script>
