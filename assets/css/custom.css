@@ -2468,3 +2468,29 @@ a {
   background: #18243e !important;
   color: white !important;
 }
+
+.avatar-title {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--ct-primary);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 600;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.avatar-sm {
+  height: 3rem;
+  width: 3rem;
+}
