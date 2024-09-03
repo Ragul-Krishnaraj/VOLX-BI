@@ -2451,4 +2451,20 @@ a {
     color:  #12263f !important
  }
 
- 
+ .border-right {
+  border-right: 1px solid #CBCED4 !important;
+}
+
+
+.accordion-button:not(.collapsed) {
+   background-color: #e6ebf2 !important;
+ }
+
+ .fw-600 {
+  font-weight: 600;
+}
+
+.table thead tr th {
+  background: #18243e !important;
+  color: white !important;
+}

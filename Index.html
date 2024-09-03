@@ -1,788 +1,934 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Volante Experience</title>
-    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
-    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/custom.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  </head>
-  <body>
-    <div class="dark-blue-bg">
-      <div class="col-md-12">
-        <div class="mb-5">
-          <nav class="navbar fixed-top navbar-expand navbar-light bg-volante">
-            <div class="container-fluid">
-              <a class="navbar-brand version-info-trigger">
-                <img src="assets/img/darlogo-new.png" alt="" class="img-fluid">
-              </a>
-              <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div id="navbarSupportedContent" class="collapse navbar-collapse d-flex align-items-center justify-content-end">
-                <span id="navbar-menu" class="headerNameText" style="margin-left: auto;">Welcome,</span>
-                <span class="material-icons-outlined account-circleicon img">account_circle</span>
-                <button class="btn-small-exit mr-2" style="font-size: 16px !important; padding-top: 2px !important;"> Logout </button>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
-      <div class="sidebar" id="mainSidebarSection">
-        <div>
-          <div class="hamburger-menu">
-            <input type="checkbox" id="checkbox-hamburger-menu" onclick="changeSidebarState()" />
-            <label class="label-hamburger-menu" for="checkbox-hamburger-menu">
-              <img src="assets/img/D-Toggle1.png" class="setIcon1" alt="menuItem">
-            </label>
-          </div>
-        </div>
-        <ul id="nav-links" class="nav-links">
-          <li id="step1-li">
-            <div class="dropdown-title">
-              <a href="/ftu-paas/notification-screenflow">
-                <img alt="menuItem" class="setIcon" src="assets/img/D-Home.png">
-                <span class="link_name">Command Center</span>
-              </a>
-            </div>
-            <ul class="sub-menu blank">
-              <li>
-                <a class="link_name">Command Center</a>
-              </li>
-            </ul>
-          </li>
-          <li onclick="showMenu()">
-            <div class="dropdown-title">
-              <a>
-                <img src="assets/img/D-Reports.png" class="setIcon" alt="menuItem" />
-                <span class="link_name">Reports</span>
-              </a>
-              <i class="fa fa-angle-down arrow" id="arrow-transform"></i>
-            </div>
-            <ul class="sub-menu" id="listSectionForReports" style="display: none;">
-              <li>
-                <a class="link_name">Reports</a>
-              </li>
-              <li>
-                <span class="d-flex">
-                  <a>
-                    <img alt="menuItem" class="setIcon1" src="assets/img/D-allReports.png"> All Reports </a>
-                </span>
-              </li>
-              <li>
-                <span class="d-flex">
-                  <a>
-                    <img alt="menuItem" class="setIcon1" src="assets/img/D-Jobs.png"> Jobs </a>
-                </span>
-              </li>
-              <li>
-                <span class="d-flex">
-                  <a>
-                    <img alt="menuItem" class="setIcon1" src="assets/img/D-Templates.png"> Templates </a>
-                </span>
-              </li>
-            </ul>
-          </li>
-          <li class="active" onclick="showMenu2()">
-            <div class="dropdown-title">
-              <a>
-                <img src="assets/img/D-Reports.png" class="setIcon" alt="menuItem" />
-                <span class="link_name">Business Insights</span>
-              </a>
-              <i class="fa fa-angle-down arrow" id="arrow-transforms"></i>
-            </div>
-            <ul class="sub-menu" id="listSectionForReportss" style="display: block;">
-              <li class="active">
-                <span class="d-flex">
-                  <a>
-                    <img alt="menuItem" class="setIcon" src="assets/img/payment-flows.png"> Payment Flows </a>
-                </span>
-              </li>
-              <li>
-                <span class="d-flex">
-                  <a>
-                    <img alt="menuItem" class="setIcon" src="assets/img/Exception-management.png"> Exception Management </a>
-                </span>
-              </li>
-              <li>
-                <span class="d-flex">
-                  <a>
-                    <img alt="menuItem" class="setIcon" src="assets/img/Services.png"> Ancilary Services </a>
-                </span>
-              </li>
-              <li>
-                <span class="d-flex">
-                  <a>
-                    <img alt="menuItem" class="setIcon" src="assets/img/channel.png"> Channels </a>
-                </span>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <div class="dropdown-title">
-              <a class="dropdown-item cursorupload">
-                <img src="assets/img/D-Volpay.png" alt="menuItem" class="setIcon">
-                <span class="link_name">Volpay</span>
-              </a>
-            </div>
-          </li>
-        </ul>
-        <div>
-          <p class="version_label version-tag-min d-none">V 1.12</p>
-          <p class="version_label version-tag-max">Version 1.12</p>
-        </div>
-      </div>
-      <section class="home-section">
-        <div class="home-view">
-          <div class="">
-            <div class="page-inner">
-              <div class="d-flex justify-content-between">
-                <div class="col-md-8">
-                  <h4 class="page-title">Payment Flows</h4>
-                </div>
-                <div class="col-md-4">
-                  <form class="d-flex">
-                    <div class="input-group">
-                      <input type="text" class="form-control form-control-light" id="reportrange">
-                      <span class="input-group-text bg-primary border-primary text-white">
-                        <i class="far fa-calendar-alt"></i>
-                      </span>
-                    </div>
-                    <a class="btn btn-primary ms-2">
-                      <i class="fas fa-sync-alt"></i>
-                    </a>
-                  </form>
-                </div>
-              </div>
-              <div class="col-md-12">
-                <div class="card">
-                  <div class="card-body">
-                    <ul class="nav nav-tabs nav-line nav-color-secondary" id="line-tab" role="tablist">
-                      <li class="nav-item" role="presentation">
-                        <a class="nav-link active" id="fedwire-home-tab" data-bs-toggle="pill" href="#fedwire-home" role="tab" aria-controls="pills-home" aria-selected="true">Fedwire</a>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="line-profile-tab" data-bs-toggle="pill" href="#tchtrp-profile" role="tab" aria-controls="pills-profile" aria-selected="false" tabindex="-1">TCH-RTP</a>
-                      </li>
-                    </ul>
-                    <div class="tab-content mt-3 mb-3" id="tchtrp-tabContent">
-                      <div class="tab-pane fade show active" id="fedwire-home" role="tabpanel" aria-labelledby="fedwire-home-tab">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <select class="form-select form-select rounded-pill" aria-label=".form-select-sm example">
-                              <option selected="">Bank Transfer</option>
-                              <option>Check Same Day Settlement</option>
-                              <option>Customer Transfer Plus</option>
-                              <option>Customer Transfer</option>
-                              <option>Deposit to Senders Account</option>
-                              <option>Drawdown Response</option>
-                              <option>Fed Funds Returned</option>
-                              <option>Fed Funds Sold</option>
-                              <option>Bank Transfer Reversal</option>
-                              <option>Customer Transfer Reversal</option>
-                            </select>
-                          </div>
-                        </div>
-                        <!-- filter modal -->
-                        <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog modal-dialog-slideout">
-                            <div class="modal-content">
-                              <div class="modal-header modal-header-custom d-flex">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
-                                <h6 class="mb-0">
-                                  <b>Filter</b>
-                                </h6>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                  <i class="fas fa-times text-white"></i>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                                <p> Data need to check</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog modal-dialog-slideout">
-                            <div class="modal-content">
-                              <div class="modal-header modal-header-custom d-flex">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
-                                <h6 class="mb-0">
-                                  <b>Traffic Goal</b>
-                                </h6>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                  <i class="fas fa-times text-white"></i>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                                <div class="chart-content-bg">
-                                  <div class="row text-center">
-                                    <div class="col-sm-6">
-                                      <p class="text-muted mb-0 mt-3">Target</p>
-                                      <h2 class="fw-normal mb-3">
-                                        <span>$10,000</span>
-                                        <span class="badge badge-warning-lighten">Payment / Week</span>
-                                      </h2>
-                                    </div>
-                                    <div class="col-sm-6">
-                                      <p class="text-muted mb-0 mt-3">Actual</p>
-                                      <h2 class="fw-normal mb-3">
-                                        <span>$7,400</span>
-                                        <span class="badge badge-warning-dark">Payment / Week</span>
-                                        <span>
-                                          <i class="fas fa-arrow-down text-danger me-1 f-16"></i>
-                                        </span>
-                                        <span class="text-danger me-2 f-16">25%</span>
-                                      </h2>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="row mt-5">
-                                  <div class="col-md-12">
-                                    <div class="card">
-                                      <div class="card-header">
-                                        <div class="card-title">Past Week Trends</div>
-                                      </div>
-                                      <div class="card-body">
-                                        <div class="chart-container">
-                                          <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
-                                            <div class="chartjs-size-monitor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
-                                              <div style="position: absolute; width: 1000000px; height: 1000000px; left: 0; top: 0"></div>
-                                            </div>
-                                            <div class="chartjs-size-monitor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
-                                              <div style="position: absolute; width: 200%; height: 200%; left: 0; top: 0"></div>
-                                            </div>
-                                          </div>
-                                          <canvas id="myChart">
-                                            <ul class="0-legend">
-                                              <li>
-                                                <span style="background-color: transparent"></span>Actual Payment Traffic
-                                              </li>
-                                              <li>
-                                                <span style="background-color: transparent"></span>Target Benchmark
-                                              </li>
-                                            </ul>
-                                          </canvas>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row mt-3">
-                          <div class="col-8">
-                            <div class="row">
-                              <div class="col-12 col-sm-6 col-md-6 col-xl-6 col-xxl-6 mb-3">
-                                <div class="card card-profile justify-content-center h-100">
-                                  <div class="card-footer">
-                                    <div class="row user-stats text-center">
-                                      <div class="col mt-auto">
-                                        <div class="number"></div>
-                                        <div class="number"></div>
-                                        <h6 class="text-start">
-                                          <b>Traffic Goals</b>
-                                        </h6>
-                                        <h6 class="text-start">
-                                          <b>Outflows</b>
-                                        </h6>
-                                      </div>
-                                      <div class="col">
-                                        <span class="btn-label just-icon">
-                                          <img alt="menuItem" class="setIcon" src="assets/img/cube.png">
-                                        </span>
-                                        <div class="number">Volume</div>
-                                        <div class="title">1,00,000</div>
-                                        <div class="title">50,000</div>
-                                      </div>
-                                      <div class="col">
-                                        <span class="btn-label just-icon">
-                                          <img alt="menuItem" class="setIcon" src="assets/img/money.png">
-                                        </span>
-                                        <div class="number">Value</div>
-                                        <div class="title">1,00,000</div>
-                                        <div class="title">1,00,00</div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-12 col-sm-6 col-md-6 col-xl-6 mb-3">
-                                <div class="card h-100">
-                                  <div class="card-body align-items-center  d-grid">
-                                    <div class="d-flex justify-content-between">
-                                      <div>
-                                        <h6>
-                                          <b>Traffic Goals</b>
-                                        </h6>
-                                        <p class="text-muted mb-2">Difference</p>
-                                      </div>
-                                      <div class="d-flex align-items-end mb-3">
-                                        <span>
-                                          <i class="fas fa-arrow-down text-danger me-1"></i>
-                                        </span>
-                                        <span class="text-danger me-2">25%</span>
-                                        <span class="text-muted">Since last week</span>
-                                      </div>
-                                    </div>
-                                    <div class="progress progress-sm">
-                                      <div class="progress-bar bg-secondary w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="d-flex justify-content-between mt-2">
-                                      <p class="text-muted mb-0">Change</p>
-                                      <p class="text-muted mb-0">75%</p>
-                                    </div>
-                                    <div class="text-center">
-                                      <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Details</a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-12 col-sm-6 col-md-6 col-xl-12">
-                                <div class="card">
-                                  <div class="card-body">
-                                    <div class="col-md-12">
-                                      <ul class="nav nav-tabs nav-line nav-color-secondary" id="line-tab" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                          <a class="nav-link active" id="top-transfers-tab" data-bs-toggle="pill" href="#top-transfers" role="tab" aria-controls="pills-home" aria-selected="true">Top Transfers</a>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                          <a class="nav-link" id="line-profile-tab" data-bs-toggle="pill" href="#top-parties" role="tab" aria-controls="pills-profile" aria-selected="false" tabindex="-1">Top Parties</a>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                          <img class="setIcon benchmark-iconstyle" data-bs-toggle="modal" tooltip="true" data-bs-placement="right" title="Filter " data-bs-toggle="modal" data-bs-target="#filterModal" src="assets/img/tune.png">
-                                        </li>
-                                      </ul>
-                                      <div class="tab-content mt-3 mb-3" id="top-parties-tabContent">
-                                        <div class="tab-pane fade show active" id="top-transfers" role="tabpanel" aria-labelledby="top-transfers-tab">
-                                          <div class="d-flex align-items-center">
-                                            <div class="chip"> Incoming <span class="closebtn" onclick="this.parentElement.style.display='none'">
-                                                <span class="material-symbols-outlined"> close </span>
-                                              </span>
-                                            </div>
-                                            <div class="chip"> Outgoing <span class="closebtn" onclick="this.parentElement.style.display='none'">
-                                                <span class="material-symbols-outlined"> close </span>
-                                              </span>
-                                            </div>
-                                            <div class="chip"> 10,000 USD <span class="closebtn" onclick="this.parentElement.style.display='none'">
-                                                <span class="material-symbols-outlined"> close </span>
-                                              </span>
-                                            </div>
-                                            <div>
-                                              <button class="btn btn-link">Clear All</button>
-                                            </div>
-                                          </div>
-                                          <div class="table">
-                                            <table class="table align-items-center mb-0 table table-hover">
-                                              <thead class="thead-light">
-                                                <tr>
-                                                  <th scope="col">#</th>
-                                                  <th scope="col">ID</th>
-                                                  <th scope="col">Parent ID</th>
-                                                  <th scope="col">Value</th>
-                                                  <th scope="col"></th>
-                                                </tr>
-                                              </thead>
-                                              <tbody>
-                                                <tr>
-                                                  <th scope="row">01</th>
-                                                  <td>#126786</td>
-                                                  <td>#126786</td>
-                                                  <td>$340.00</td>
-                                                  <td>
-                                                    <i class="fas fa-arrow-up text-success me-3"></i>
-                                                    <span class="text-success"> Incoming</span>
-                                                  </td>
-                                                </tr>
-                                                <tr>
-                                                  <th scope="row">02</th>
-                                                  <td>#126786</td>
-                                                  <td>#126786</td>
-                                                  <td>$340.00</td>
-                                                  <td>
-                                                    <i class="fas fa-arrow-down text-warning me-3"></i>
-                                                    <span class="text-warning"> Outgoing</span>
-                                                  </td>
-                                                </tr>
-                                                <tr>
-                                                  <th scope="row">03</th>
-                                                  <td>#126786</td>
-                                                  <td>#126786</td>
-                                                  <td>$840.00</td>
-                                                  <td>
-                                                    <i class="fas fa-arrow-down text-warning me-3"></i>
-                                                    <span class="text-warning"> Outgoing</span>
-                                                  </td>
-                                                </tr>
-                                                <tr>
-                                                  <th scope="row">04</th>
-                                                  <td>#126786</td>
-                                                  <td>#126786</td>
-                                                  <td>$340.00</td>
-                                                  <td>
-                                                    <i class="fas fa-arrow-up text-success me-3"></i>
-                                                    <span class="text-success"> Incoming</span>
-                                                  </td>
-                                                </tr>
-                                                <tr>
-                                                  <th scope="row">05</th>
-                                                  <td>#126786</td>
-                                                  <td>#126786</td>
-                                                  <td>$340.00</td>
-                                                  <td>
-                                                    <i class="fas fa-arrow-up text-success me-3"></i>
-                                                    <span class="text-success"> Incoming</span>
-                                                  </td>
-                                                </tr>
-                                              </tbody>
-                                            </table>
-                                          </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="top-parties" role="tabpanel" aria-labelledby="top-parties-tab">
-                                          <div class="d-flex align-items-center">
-                                            <div class="chip"> Incoming <span class="closebtn" onclick="this.parentElement.style.display='none'">
-                                                <span class="material-symbols-outlined"> close </span>
-                                              </span>
-                                            </div>
-                                            <div class="chip"> Outgoing <span class="closebtn" onclick="this.parentElement.style.display='none'">
-                                                <span class="material-symbols-outlined"> close </span>
-                                              </span>
-                                            </div>
-                                            <div class="chip"> 10,000 USD <span class="closebtn" onclick="this.parentElement.style.display='none'">
-                                                <span class="material-symbols-outlined"> close </span>
-                                              </span>
-                                            </div>
-                                            <div>
-                                              <button class="btn btn-link">Clear All</button>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-4">
-                            <div class="col-md-12">
-                              <div class="card">
-                                <div class="card-header">
-                                  <div class="card-title">Traffic</div>
-                                </div>
-                                <div class="card-body">
-                                  <div class="chart-container">
-                                    <canvas id="multipleLineChart"></canvas>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-md-12">
-                              <div class="card">
-                                <div class="card-header">
-                                  <div class="card-title">Transfer Values</div>
-                                </div>
-                                <div class="card-body">
-                                  <div class="chart-container">
-                                    <canvas id="multipleBarChart"></canvas>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="tab-pane fade" id="tchtrp-profile" role="tabpanel" aria-labelledby="tchtrp-profile-tab">
-                        <p>Data - Comes here - 2</p>
-                      </div>
-                    </div>
+   <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <title>Volante Experience</title>
+      <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+      <link rel="icon" href="assets/img/favicon.png" type="image/x-icon" />
+      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="assets/css/custom.css" />
+      <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   </head>
+   <body>
+      <div class="dark-blue-bg">
+         <div class="col-md-12">
+            <div class="mb-5">
+               <nav class="navbar fixed-top navbar-expand navbar-light bg-volante">
+                  <div class="container-fluid">
+                     <a class="navbar-brand version-info-trigger">
+                     <img src="assets/img/darlogo-new.png" alt="" class="img-fluid">
+                     </a>
+                     <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+                     <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div id="navbarSupportedContent" class="collapse navbar-collapse d-flex align-items-center justify-content-end">
+                        <span id="navbar-menu" class="headerNameText" style="margin-left: auto;">Welcome,</span>
+                        <span class="material-icons-outlined account-circleicon img">account_circle</span>
+                        <button class="btn-small-exit mr-2" style="font-size: 16px !important; padding-top: 2px !important;"> Logout </button>
+                     </div>
                   </div>
-                </div>
-              </div>
+               </nav>
             </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <!-- JS Files -->
-    <script src="assets/js/core/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/core/popper.min.js"></script>
-    <script src="assets/js/core/bootstrap.min.js"></script>
-    <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-    <script src="assets/js/plugin/webfont/webfont.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <script src="assets/js/jquery.sparkline/jquery.sparkline.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
-    <script>
-      //         $(".btn").click(function() {
-      //   $('#filterModal').modal('show');
-      // });
-      // $('[data-toggle="tooltip"]').tooltip()
-      const tooltipTriggerList = document.querySelectorAll('[tooltip="true"]')
-      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-    </script>
-    <script>
-      const ctx = document.getElementById('myChart');
-      new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ['W-1', 'W-2', 'W-3', 'W-4', 'W-5', 'W-6'],
-          datasets: [{
-            label: "Actual Payment Traffic",
-            borderColor: "#f3545d",
-            pointBorderColor: "#FFF",
-            pointBackgroundColor: "#f3545d",
-            pointBorderWidth: 2,
-            pointHoverRadius: 4,
-            pointHoverBorderWidth: 1,
-            pointRadius: 4,
-            backgroundColor: "transparent",
-            fill: true,
-            borderWidth: 2,
-            data: [0, 30, 58, 79, 90, 105, 40, 160, 185, 210, 185, 194],
-          }, {
-            label: "Target Benchmark",
-            borderColor: "green",
-            pointBorderColor: "#FFF",
-            pointBackgroundColor: "#f3545d",
-            pointBorderWidth: 2,
-            pointHoverRadius: 4,
-            pointHoverBorderWidth: 1,
-            pointRadius: 4,
-            backgroundColor: "transparent",
-            fill: true,
-            borderWidth: 2,
-            data: [0, 100, 58, 79, 90, 80, 117, 160, 185, 210, 185, 194],
-          }]
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true
-            }
-          }
-        }
-      });
-    </script>
-    <script>
-      WebFont.load({
-        custom: {
-          families: ["Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"],
-          urls: ["assets/css/fonts.min.css"],
-        },
-        active: function() {
-          sessionStorage.fonts = true;
-        },
-      });
-      var openSidebar = false;
-
-      function changeSidebarState() {
-        openSidebar = !openSidebar;
-        if (openSidebar) {
-          document.getElementById('mainSidebarSection').classList.add('sidebar-close');
-        } else {
-          document.getElementById('mainSidebarSection').classList.remove('sidebar-close');
-        }
-      }
-
-      function showMenu() {
-        var ele = document.getElementById('listSectionForReports');
-        if (ele.style.display == 'block') {
-          ele.style.display = 'none';
-          document.getElementById('arrow-transform').style.transform = 'rotate(0deg)';
-        } else {
-          ele.style.display = 'block';
-          document.getElementById('arrow-transform').style.transform = 'rotate(180deg)';
-        }
-      }
-
-      function showMenu2() {
-        var ele = document.getElementById('listSectionForReportss');
-        if (ele.style.display == 'block') {
-          ele.style.display = 'none';
-          document.getElementById('arrow-transforms').style.transform = 'rotate(0deg)';
-        } else {
-          ele.style.display = 'block';
-          document.getElementById('arrow-transforms').style.transform = 'rotate(180deg)';
-        }
-      }
-      var myMultipleLineChart = new Chart(multipleLineChart, {
-        type: "line",
-        data: {
-          labels: ["Morning", "Mid Day", "Evening", ],
-          datasets: [{
-            label: "Traffic",
-            borderColor: "#1d7af3",
-            backgroundColor: "transparent",
-            data: [0, 1, 2, 3],
-            pointBorderColor: "#FFF",
-            pointBackgroundColor: "#1d7af3",
-            pointBorderWidth: 2,
-            pointHoverRadius: 4,
-            pointHoverBorderWidth: 1,
-            pointRadius: 4,
-            fill: true,
-            borderWidth: 2,
-          }],
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          legend: {
-            position: "top",
-          },
-          tooltips: {
-            bodySpacing: 4,
-            mode: "nearest",
-            intersect: 0,
-            position: "nearest",
-            xPadding: 10,
-            yPadding: 10,
-            caretPadding: 10,
-          },
-          layout: {
-            padding: {
-              left: 15,
-              right: 15,
-              top: 15,
-              bottom: 15
-            },
-          },
-          scales: {
-            x: {
-              position: 'top'
-            },
-            y: {
-              ticks: {
-                callback: function(value, index, ticks) {
-                  if (value == 0) return 'Processed';
-                  if (value == 1) return 'Returned';
-                  if (value == 2) return 'Rejected';
-                  if (value == 3) return 'NAK'
-                },
-                autoSkip: false
-              },
-              grid: {
-                display: true, // Shows the grid lines
-                drawBorder: false, // Hides the border
-                color: 'rgba(255, 99, 132, 0.2)', // Color of grid lines
-                lineWidth: 1, // Width of grid lines
-                borderDash: [5, 30], // Dashed grid lines, if desired
-              },
-            }
-          },
-          plugins: {
-            legend: {
-              display: false
-            }
-          }
-        },
-      });
-      var myMultipleBarChart = new Chart(multipleBarChart, {
-        type: 'bar',
-        data: {
-          labels: ['0', '200', '400', '600', '800'],
-          datasets: [{
-            label: "First time visitors",
-            backgroundColor: "#59d05d",
-            borderColor: "#59d05d",
-            data: [-3, -10, -18, -24, -10],
-          }, {
-            label: "Visitors",
-            backgroundColor: "#fdaf4b",
-            borderColor: "#fdaf4b",
-            data: [-10, -20, -13, -18, -4],
-          }, {
-            label: "Pageview",
-            backgroundColor: "#177dff",
-            borderColor: "#177dff",
-            data: [5, 2, 15, 24, 12, 6, 12],
-          }, ],
-        },
-        options: {
-          plugins: {
-            legend: {
-              display: false
-            }
-          },
-          scales: {
-            x: {
-              position: 'top',
-              grid: {
-                display: false
-              }
-            },
-            y: {
-              ticks: {
-                callback: function(value, index, ticks) {
-                  // Custom labels based on the value (nagative value for the chart)
-                  if (value >= -24 && value <= -21) return '9 PM - 12 AM';
-                  if (value > -21 && value <= -18) return '6 PM - 9 PM';
-                  if (value > -18 && value <= -15) return '3 PM - 6 PM';
-                  if (value > -15 && value <= -12) return '12 PM - 3 PM';
-                  if (value > -12 && value <= -9) return '9 AM - 12 PM';
-                  if (value > -9 && value <= -6) return '6 AM - 9 AM';
-                  if (value > -6 && value <= -3) return '3 AM - 6 AM';
-                  if (value > -3 && value <= 0) return '12 AM - 3 AM';
-                  if (value < -24) return 'MIN';
-                  // (positive value for the chart)
-                  if (value > 0 && value <= 3) return '0 AM - 3 AM';
-                  if (value > 3 && value <= 6) return '3 AM - 6 AM';
-                  if (value > 6 && value <= 9) return '6 AM - 9 AM';
-                  if (value > 9 && value <= 12) return '9 AM - 12 PM';
-                  if (value > 12 && value <= 15) return '12 PM - 3 PM';
-                  if (value > 15 && value <= 18) return '3 PM - 6 PM';
-                  if (value > 18 && value <= 21) return '6 PM - 9 PM';
-                  if (value > 21 && value <= 24) return '9 PM - 12 AM';
-                  return 'MAX'; // Return empty string for values outside defined ranges
-                },
-                beginAtZero: true,
-                autoSkip: false
-              }
-            }
-          }
-        }
-      });
-    </script>
-    <script type="text/javascript">
-      $(function() {
-        var start = moment().subtract(29, "days");
-        var end = moment();
-
-        function cb(start, end) {
-          $("#reportrange span").html(start.format("MMMM D, YYYY") + " - " + end.format("MMMM D, YYYY"));
-        }
-        $("#reportrange").daterangepicker({
-          startDate: start,
-          endDate: end,
-          ranges: {
-            Today: [moment(), moment()],
-            Yesterday: [moment().subtract(1, "days"), moment().subtract(1, "days")],
-            "Last 7 Days": [moment().subtract(6, "days"), moment()],
-            "Last 30 Days": [moment().subtract(29, "days"), moment()],
-            "This Month": [moment().startOf("month"), moment().endOf("month")],
-            "Last Month": [moment().subtract(1, "month").startOf("month"), moment().subtract(1, "month").endOf("month")],
-          },
-        }, cb);
-        cb(start, end);
-      });
-    </script>
-  </body>
+         </div>
+         <div class="sidebar" id="mainSidebarSection">
+            <div>
+               <div class="hamburger-menu">
+                  <input type="checkbox" id="checkbox-hamburger-menu" onclick="changeSidebarState()" />
+                  <label class="label-hamburger-menu" for="checkbox-hamburger-menu">
+                  <img src="assets/img/D-Toggle1.png" class="setIcon1" alt="menuItem">
+                  </label>
+               </div>
+            </div>
+            <ul id="nav-links" class="nav-links">
+               <li id="step1-li">
+                  <div class="dropdown-title">
+                     <a href="/ftu-paas/notification-screenflow">
+                     <img alt="menuItem" class="setIcon" src="assets/img/D-Home.png">
+                     <span class="link_name">Command Center</span>
+                     </a>
+                  </div>
+                  <ul class="sub-menu blank">
+                     <li>
+                        <a class="link_name">Command Center</a>
+                     </li>
+                  </ul>
+               </li>
+               <li onclick="showMenu()">
+                  <div class="dropdown-title">
+                     <a>
+                     <img src="assets/img/D-Reports.png" class="setIcon" alt="menuItem" />
+                     <span class="link_name">Reports</span>
+                     </a>
+                     <i class="fa fa-angle-down arrow" id="arrow-transform"></i>
+                  </div>
+                  <ul class="sub-menu" id="listSectionForReports" style="display: none;">
+                     <li>
+                        <a class="link_name">Reports</a>
+                     </li>
+                     <li>
+                        <span class="d-flex">
+                        <a>
+                        <img alt="menuItem" class="setIcon1" src="assets/img/D-allReports.png"> All Reports </a>
+                        </span>
+                     </li>
+                     <li>
+                        <span class="d-flex">
+                        <a>
+                        <img alt="menuItem" class="setIcon1" src="assets/img/D-Jobs.png"> Jobs </a>
+                        </span>
+                     </li>
+                     <li>
+                        <span class="d-flex">
+                        <a>
+                        <img alt="menuItem" class="setIcon1" src="assets/img/D-Templates.png"> Templates </a>
+                        </span>
+                     </li>
+                  </ul>
+               </li>
+               <li class="active" onclick="showMenu2()">
+                  <div class="dropdown-title">
+                     <a>
+                     <img src="assets/img/D-Reports.png" class="setIcon" alt="menuItem" />
+                     <span class="link_name">Business Insights</span>
+                     </a>
+                     <i class="fa fa-angle-down arrow" id="arrow-transforms"></i>
+                  </div>
+                  <ul class="sub-menu" id="listSectionForReportss" style="display: block;">
+                     <li class="active">
+                        <span class="d-flex">
+                        <a>
+                        <img alt="menuItem" class="setIcon" src="assets/img/payment-flows.png"> Payment Flows </a>
+                        </span>
+                     </li>
+                     <li>
+                        <span class="d-flex">
+                        <a>
+                        <img alt="menuItem" class="setIcon" src="assets/img/Exception-management.png"> Exception Management </a>
+                        </span>
+                     </li>
+                     <li>
+                        <span class="d-flex">
+                        <a>
+                        <img alt="menuItem" class="setIcon" src="assets/img/Services.png"> Ancilary Services </a>
+                        </span>
+                     </li>
+                     <li>
+                        <span class="d-flex">
+                        <a>
+                        <img alt="menuItem" class="setIcon" src="assets/img/channel.png"> Channels </a>
+                        </span>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <div class="dropdown-title">
+                     <a class="dropdown-item cursorupload">
+                     <img src="assets/img/D-Volpay.png" alt="menuItem" class="setIcon">
+                     <span class="link_name">Volpay</span>
+                     </a>
+                  </div>
+               </li>
+            </ul>
+            <div>
+               <p class="version_label version-tag-min d-none">V 1.12</p>
+               <p class="version_label version-tag-max">Version 1.12</p>
+            </div>
+         </div>
+         <section class="home-section">
+            <div class="home-view">
+               <div class="">
+                  <div class="page-inner">
+                     <div class="d-flex justify-content-between">
+                        <div class="col-md-8">
+                           <h4 class="page-title">Payment Flows</h4>
+                        </div>
+                        <div class="col-md-4">
+                           <form class="d-flex">
+                              <div class="input-group">
+                                 <input type="text" class="form-control form-control-light" id="reportrange">
+                                 <span class="input-group-text bg-primary border-primary text-white">
+                                 <i class="far fa-calendar-alt"></i>
+                                 </span>
+                              </div>
+                              <a class="btn btn-primary ms-2">
+                              <i class="fas fa-sync-alt"></i>
+                              </a>
+                           </form>
+                        </div>
+                     </div>
+                     <div class="col-md-12">
+                        <div class="card">
+                           <div class="card-body">
+                              <ul class="nav nav-tabs nav-line nav-color-secondary" id="line-tab" role="tablist">
+                                 <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" id="fedwire-home-tab" data-bs-toggle="pill" href="#fedwire-home" role="tab" aria-controls="pills-home" aria-selected="true">Fedwire</a>
+                                 </li>
+                                 <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="line-profile-tab" data-bs-toggle="pill" href="#tchtrp-profile" role="tab" aria-controls="pills-profile" aria-selected="false" tabindex="-1">TCH-RTP</a>
+                                 </li>
+                              </ul>
+                              <div class="tab-content mt-3 mb-3" id="tchtrp-tabContent">
+                                 <div class="tab-pane fade show active" id="fedwire-home" role="tabpanel" aria-labelledby="fedwire-home-tab">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                       <div>
+                                          <select class="form-select form-select rounded-pill" aria-label=".form-select-sm example">
+                                             <option selected="">Bank Transfer</option>
+                                             <option>Check Same Day Settlement</option>
+                                             <option>Customer Transfer Plus</option>
+                                             <option>Customer Transfer</option>
+                                             <option>Deposit to Senders Account</option>
+                                             <option>Drawdown Response</option>
+                                             <option>Fed Funds Returned</option>
+                                             <option>Fed Funds Sold</option>
+                                             <option>Bank Transfer Reversal</option>
+                                             <option>Customer Transfer Reversal</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                    <!-- filter modal -->
+                                    <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                       <div class="modal-dialog modal-dialog-slideout">
+                                          <div class="modal-content">
+                                             <div class="modal-header modal-header-custom d-flex">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                                                <h6 class="mb-0">
+                                                   <b>Filter</b>
+                                                </h6>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                <i class="fas fa-times text-white"></i>
+                                                </button>
+                                             </div>
+                                             <div class="modal-body">
+                                                <p> Data need to check</p>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                       <div class="modal-dialog modal-dialog-slideout">
+                                          <div class="modal-content">
+                                             <div class="modal-header modal-header-custom d-flex">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                                                <h6 class="mb-0">
+                                                   <b>Traffic Goal</b>
+                                                </h6>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                <i class="fas fa-times text-white"></i>
+                                                </button>
+                                             </div>
+                                             <div class="modal-body">
+                                                <div class="chart-content-bg">
+                                                   <div class="row text-center">
+                                                      <div class="col-sm-6">
+                                                         <p class="text-muted mb-0 mt-3">Target</p>
+                                                         <h2 class="fw-normal mb-3">
+                                                            <span>$10,000</span>
+                                                            <span class="badge badge-warning-lighten">Payment / Week</span>
+                                                         </h2>
+                                                      </div>
+                                                      <div class="col-sm-6">
+                                                         <p class="text-muted mb-0 mt-3">Actual</p>
+                                                         <h2 class="fw-normal mb-3">
+                                                            <span>$7,400</span>
+                                                            <span class="badge badge-warning-dark">Payment / Week</span>
+                                                            <span>
+                                                            <i class="fas fa-arrow-down text-danger me-1 f-16"></i>
+                                                            </span>
+                                                            <span class="text-danger me-2 f-16">25%</span>
+                                                         </h2>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="row mt-5">
+                                                   <div class="col-md-12">
+                                                      <div class="card">
+                                                         <div class="card-header">
+                                                            <div class="card-title">Past Week Trends</div>
+                                                         </div>
+                                                         <div class="card-body">
+                                                            <div class="chart-container">
+                                                               <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                                                  <div class="chartjs-size-monitor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                                                     <div style="position: absolute; width: 1000000px; height: 1000000px; left: 0; top: 0"></div>
+                                                                  </div>
+                                                                  <div class="chartjs-size-monitor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                                                     <div style="position: absolute; width: 200%; height: 200%; left: 0; top: 0"></div>
+                                                                  </div>
+                                                               </div>
+                                                               <canvas id="myChart">
+                                                                  <ul class="0-legend">
+                                                                     <li>
+                                                                        <span style="background-color: transparent"></span>Actual Payment Traffic
+                                                                     </li>
+                                                                     <li>
+                                                                        <span style="background-color: transparent"></span>Target Benchmark
+                                                                     </li>
+                                                                  </ul>
+                                                               </canvas>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                       <div class="col-8">
+                                          <div class="row">
+                                             <div class="col-12 col-sm-6 col-md-6 col-xl-6 col-xxl-6 mb-3">
+                                                <div class="card card-profile justify-content-center h-100">
+                                                   <div class="card-footer">
+                                                      <div class="row user-stats text-center">
+                                                         <div class="col mt-auto">
+                                                            <div class="number"></div>
+                                                            <div class="number"></div>
+                                                            <h6 class="text-start">
+                                                               <b>Traffic Goals</b>
+                                                            </h6>
+                                                            <h6 class="text-start">
+                                                               <b>Outflows</b>
+                                                            </h6>
+                                                         </div>
+                                                         <div class="col">
+                                                            <span class="btn-label just-icon">
+                                                            <img alt="menuItem" class="setIcon" src="assets/img/cube.png">
+                                                            </span>
+                                                            <div class="number">Volume</div>
+                                                            <div class="title">1,00,000</div>
+                                                            <div class="title">50,000</div>
+                                                         </div>
+                                                         <div class="col">
+                                                            <span class="btn-label just-icon">
+                                                            <img alt="menuItem" class="setIcon" src="assets/img/money.png">
+                                                            </span>
+                                                            <div class="number">Value</div>
+                                                            <div class="title">1,00,000</div>
+                                                            <div class="title">1,00,00</div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="col-12 col-sm-6 col-md-6 col-xl-6 mb-3">
+                                                <div class="card h-100">
+                                                   <div class="card-body align-items-center  d-grid">
+                                                      <div class="d-flex justify-content-between">
+                                                         <div>
+                                                            <h6>
+                                                               <b>Traffic Goals</b>
+                                                            </h6>
+                                                            <p class="text-muted mb-2">Difference</p>
+                                                         </div>
+                                                         <div class="d-flex align-items-end mb-3">
+                                                            <span>
+                                                            <i class="fas fa-arrow-down text-danger me-1"></i>
+                                                            </span>
+                                                            <span class="text-danger me-2">25%</span>
+                                                            <span class="text-muted">Since last week</span>
+                                                         </div>
+                                                      </div>
+                                                      <div class="progress progress-sm">
+                                                         <div class="progress-bar bg-secondary w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                      </div>
+                                                      <div class="d-flex justify-content-between mt-2">
+                                                         <p class="text-muted mb-0">Change</p>
+                                                         <p class="text-muted mb-0">75%</p>
+                                                      </div>
+                                                      <div class="text-center">
+                                                         <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Details</a>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="col-12 col-sm-6 col-md-6 col-xl-12">
+                                                <div class="card">
+                                                   <div class="card-body">
+                                                      <div class="col-md-12">
+                                                         <ul class="nav nav-tabs nav-line nav-color-secondary" id="line-tab" role="tablist">
+                                                            <li class="nav-item" role="presentation">
+                                                               <a class="nav-link active" id="top-transfers-tab" data-bs-toggle="pill" href="#top-transfers" role="tab" aria-controls="pills-home" aria-selected="true">Top Transfers</a>
+                                                            </li>
+                                                            <li class="nav-item" role="presentation">
+                                                               <a class="nav-link" id="line-profile-tab" data-bs-toggle="pill" href="#top-parties" role="tab" aria-controls="pills-profile" aria-selected="false" tabindex="-1">Top Parties</a>
+                                                            </li>
+                                                            <li class="nav-item" role="presentation">
+                                                               <img class="setIcon benchmark-iconstyle" data-bs-toggle="modal" tooltip="true" data-bs-placement="right" title="Filter " data-bs-toggle="modal" data-bs-target="#filterModal" src="assets/img/tune.png">
+                                                            </li>
+                                                         </ul>
+                                                         <div class="tab-content mt-3 mb-3" id="top-parties-tabContent">
+                                                            <div class="tab-pane fade show active" id="top-transfers" role="tabpanel" aria-labelledby="top-transfers-tab">
+                                                               <div class="d-flex align-items-center">
+                                                                  <div class="chip"> Incoming <span class="closebtn" onclick="this.parentElement.style.display='none'">
+                                                                     <span class="material-symbols-outlined"> close </span>
+                                                                     </span>
+                                                                  </div>
+                                                                  <div class="chip"> Outgoing <span class="closebtn" onclick="this.parentElement.style.display='none'">
+                                                                     <span class="material-symbols-outlined"> close </span>
+                                                                     </span>
+                                                                  </div>
+                                                                  <div class="chip"> 10,000 USD <span class="closebtn" onclick="this.parentElement.style.display='none'">
+                                                                     <span class="material-symbols-outlined"> close </span>
+                                                                     </span>
+                                                                  </div>
+                                                                  <div>
+                                                                     <button class="btn btn-link">Clear All</button>
+                                                                  </div>
+                                                               </div>
+                                                               <div class="table-responsive mt-3">
+                                                                  <table class="table table-centered table-nowrap table-hover mb-0">
+                                                                     <thead>
+                                                                        <tr>
+                                                                           <th scope="col">#</th>
+                                                                           <th scope="col">ID</th>
+                                                                           <th scope="col">Parent ID</th>
+                                                                           <th scope="col">Value</th>
+                                                                           <th scope="col"> </th>
+                                                                        </tr>
+                                                                     </thead>
+                                                                     <tbody>
+                                                                        <tr>
+                                                                           <td>
+                                                                              <div class="d-flex align-items-center">
+                                                                                 <div class="flex-grow-1  ">
+                                                                                    01
+                                                                                 </div>
+                                                                              </div>
+                                                                           </td>
+                                                                           <td>  12334</td>
+                                                                           <td> 56788</td>
+                                                                           <td>
+                                                                              <span class="text-success fw-semibold">+ $2,586.60</span>
+                                                                           </td>
+                                                                           <td>
+                                                                              <span class="badge bg-success-lighten text-success"><i class="fas fa-arrow-up text-success me-1"></i>Incoming</span>
+                                                                           </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                           <td>
+                                                                              <div class="d-flex align-items-center">
+                                                                                 <div class="flex-grow-1  ">
+                                                                                    02
+                                                                                 </div>
+                                                                              </div>
+                                                                           </td>
+                                                                           <td>  12334</td>
+                                                                           <td>  56546</td>
+                                                                           <td>
+                                                                              <span class="text-danger fw-semibold">+ $248.60</span>
+                                                                           </td>
+                                                                           <td>
+                                                                              <span class="badge bg-danger-lighten text-danger"><i class="fas fa-arrow-down text-danger me-1"></i> Outgoing</span>
+                                                                           </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                           <td>
+                                                                              <div class="d-flex align-items-center">
+                                                                                 <div class="flex-grow-1  ">
+                                                                                    03
+                                                                                 </div>
+                                                                              </div>
+                                                                           </td>
+                                                                           <td>  12334</td>
+                                                                           <td> 56788</td>
+                                                                           <td>
+                                                                              <span class="text-success fw-semibold">+ $2,586.60</span>
+                                                                           </td>
+                                                                           <td>
+                                                                              <span class="badge bg-success-lighten text-success"><i class="fas fa-arrow-up text-success me-1"></i>Incoming</span>
+                                                                           </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                           <td>
+                                                                              <div class="d-flex align-items-center">
+                                                                                 <div class="flex-grow-1  ">
+                                                                                    04
+                                                                                 </div>
+                                                                              </div>
+                                                                           </td>
+                                                                           <td>  12334</td>
+                                                                           <td> 56788</td>
+                                                                           <td>
+                                                                              <span class="text-success fw-semibold">+ $2,586.60</span>
+                                                                           </td>
+                                                                           <td>
+                                                                              <span class="badge bg-success-lighten text-success"><i class="fas fa-arrow-up text-success me-1"></i>Incoming</span>
+                                                                           </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                           <td>
+                                                                              <div class="d-flex align-items-center">
+                                                                                 <div class="flex-grow-1  ">
+                                                                                    05
+                                                                                 </div>
+                                                                              </div>
+                                                                           </td>
+                                                                           <td>  12334</td>
+                                                                           <td>  56546</td>
+                                                                           <td>
+                                                                              <span class="text-danger fw-semibold">+ $248.60</span>
+                                                                           </td>
+                                                                           <td>
+                                                                              <span class="badge bg-danger-lighten text-danger"><i class="fas fa-arrow-down text-danger me-1"></i> Outgoing</span>
+                                                                           </td>
+                                                                        </tr>
+                                                                     </tbody>
+                                                                  </table>
+                                                               </div>
+                                                            </div>
+                                                            <div class="tab-pane fade" id="top-parties" role="tabpanel" aria-labelledby="top-parties-tab">
+                                                               <div class="d-flex align-items-center">
+                                                                  <div class="chip"> Incoming <span class="closebtn" onclick="this.parentElement.style.display='none'">
+                                                                     <span class="material-symbols-outlined"> close </span>
+                                                                     </span>
+                                                                  </div>
+                                                                  <div class="chip"> Outgoing <span class="closebtn" onclick="this.parentElement.style.display='none'">
+                                                                     <span class="material-symbols-outlined"> close </span>
+                                                                     </span>
+                                                                  </div>
+                                                                  <div class="chip"> 10,000 USD <span class="closebtn" onclick="this.parentElement.style.display='none'">
+                                                                     <span class="material-symbols-outlined"> close </span>
+                                                                     </span>
+                                                                  </div>
+                                                                  <div>
+                                                                     <button class="btn btn-link">Clear All</button>
+                                                                  </div>
+                                                               </div>
+                                                               <div class="accordion mt-2" id="accordionExample">
+                                                                  <div class="accordion-item">
+                                                                     <h2 class="accordion-header" id="headingOne">
+                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#topparties-collapsed" aria-expanded="false" aria-controls="topparties-collapsed">
+                                                                           <div class="row col-md-12">
+                                                                              <div class="col-md-6 col-lg-6 d-inline-flex align-items-center border-right ">
+                                                                                 <div class="form-group row mb-1">
+                                                                                    <div class="col-sm-12  text-secondary">Home Depot</div>
+                                                                                 </div>
+                                                                              </div>
+                                                                              <div class="col-md-6 col-lg-6 d-inline-flex align-items-center">
+                                                                                 <div class=" col-md-6">
+                                                                                    <div class="text-secondary">Transfers <span class="fw-600 mx-2"> 60</span>
+                                                                                    </div>
+                                                                                 </div>
+                                                                                 <div class=" col-md-6 text-center">
+                                                                                    <div class="text-success fw-600"> 53,234 USD
+                                                                                    </div>
+                                                                                 </div>
+                                                                              </div>
+                                                                           </div>
+                                                                        </button>
+                                                                     </h2>
+                                                                     <div id="topparties-collapsed" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                                        <div class="accordion-body">
+                                                                           <div class="table-responsive">
+                                                                              <table class="table table-centered table-nowrap table-hover mb-0">
+                                                                                 <thead>
+                                                                                    <tr>
+                                                                                       <th scope="col">#</th>
+                                                                                       <th scope="col">ID</th>
+                                                                                       <th scope="col">Name</th>
+                                                                                       <th scope="col">Account Number</th>
+                                                                                       <th scope="col">Amount</th>
+                                                                                       <th scope="col"> </th>
+                                                                                    </tr>
+                                                                                 </thead>
+                                                                                 <tbody>
+                                                                                    <tr>
+                                                                                       <td>
+                                                                                          <div class="d-flex align-items-center">
+                                                                                             <div class="flex-grow-1  ">
+                                                                                                01
+                                                                                             </div>
+                                                                                          </div>
+                                                                                       </td>
+                                                                                       <td>  334</td>
+                                                                                       <td> Ragul K</td>
+                                                                                       <td> 98974487</td>
+                                                                                       <td>
+                                                                                          <span class="text-success fw-semibold">+ $2,586.60</span>
+                                                                                       </td>
+                                                                                       <td>
+                                                                                          <span class="badge bg-success-lighten text-success"><i class="fas fa-arrow-up text-success me-1"></i>Incoming</span>
+                                                                                       </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                       <td>
+                                                                                          <div class="d-flex align-items-center">
+                                                                                             <div class="flex-grow-1  ">
+                                                                                                02
+                                                                                             </div>
+                                                                                          </div>
+                                                                                       </td>
+                                                                                       <td>  33435</td>
+                                                                                       <td> John J</td>
+                                                                                       <td> 564558</td>
+                                                                                       <td>
+                                                                                          <span class="text-danger fw-semibold">+ $2,500.60</span>
+                                                                                       </td>
+                                                                                       <td>
+                                                                                          <span class="badge bg-success-lighten text-danger"><i class="fas fa-arrow-down text-danger me-1"></i>Outgoing</span>
+                                                                                       </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                       <td>
+                                                                                          <div class="d-flex align-items-center">
+                                                                                             <div class="flex-grow-1  ">
+                                                                                                03
+                                                                                             </div>
+                                                                                          </div>
+                                                                                       </td>
+                                                                                       <td>  12435</td>
+                                                                                       <td> Smith J</td>
+                                                                                       <td> 324558</td>
+                                                                                       <td>
+                                                                                          <span class="text-danger fw-semibold">+ $3,586.60</span>
+                                                                                       </td>
+                                                                                       <td>
+                                                                                          <span class="badge bg-success-lighten text-danger"><i class="fas fa-arrow-down text-danger me-1"></i>Outgoing</span>
+                                                                                       </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                       <td>
+                                                                                          <div class="d-flex align-items-center">
+                                                                                             <div class="flex-grow-1  ">
+                                                                                                04
+                                                                                             </div>
+                                                                                          </div>
+                                                                                       </td>
+                                                                                       <td>  336</td>
+                                                                                       <td> smiths K</td>
+                                                                                       <td> 274487</td>
+                                                                                       <td>
+                                                                                          <span class="text-success fw-semibold">+ $212.60</span>
+                                                                                       </td>
+                                                                                       <td>
+                                                                                          <span class="badge bg-success-lighten text-success"><i class="fas fa-arrow-up text-success me-1"></i>Incoming</span>
+                                                                                       </td>
+                                                                                    </tr>
+                                                                                 </tbody>
+                                                                              </table>
+                                                                           </div>
+                                                                        </div>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="col-4">
+                                          <div class="col-md-12">
+                                             <div class="card">
+                                                <div class="card-header">
+                                                   <div class="card-title">Traffic</div>
+                                                </div>
+                                                <div class="card-body">
+                                                   <div class="chart-container">
+                                                      <canvas id="multipleLineChart"></canvas>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="col-md-12">
+                                             <div class="card">
+                                                <div class="card-header">
+                                                   <div class="card-title">Transfer Values</div>
+                                                </div>
+                                                <div class="card-body">
+                                                   <div class="chart-container">
+                                                      <canvas id="multipleBarChart"></canvas>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tab-pane fade" id="tchtrp-profile" role="tabpanel" aria-labelledby="tchtrp-profile-tab">
+                                    <p>Data - Comes here - 2</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+      <!-- JS Files -->
+      <script src="assets/js/core/jquery-3.7.1.min.js"></script>
+      <script src="assets/js/core/popper.min.js"></script>
+      <script src="assets/js/core/bootstrap.min.js"></script>
+      <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+      <script src="assets/js/plugin/webfont/webfont.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+      <script src="assets/js/jquery.sparkline/jquery.sparkline.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <script>
+         const tooltipTriggerList = document.querySelectorAll('[tooltip="true"]')
+         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+      </script>
+      <script>
+         const ctx = document.getElementById('myChart');
+         new Chart(ctx, {
+           type: 'line',
+           data: {
+             labels: ['W-1', 'W-2', 'W-3', 'W-4', 'W-5', 'W-6'],
+             datasets: [{
+               label: "Actual Payment Traffic",
+               borderColor: "#f3545d",
+               pointBorderColor: "#FFF",
+               pointBackgroundColor: "#f3545d",
+               pointBorderWidth: 2,
+               pointHoverRadius: 4,
+               pointHoverBorderWidth: 1,
+               pointRadius: 4,
+               backgroundColor: "transparent",
+               fill: true,
+               borderWidth: 2,
+               data: [0, 30, 58, 79, 90, 105, 40, 160, 185, 210, 185, 194],
+             }, {
+               label: "Target Benchmark",
+               borderColor: "green",
+               pointBorderColor: "#FFF",
+               pointBackgroundColor: "#f3545d",
+               pointBorderWidth: 2,
+               pointHoverRadius: 4,
+               pointHoverBorderWidth: 1,
+               pointRadius: 4,
+               backgroundColor: "transparent",
+               fill: true,
+               borderWidth: 2,
+               data: [0, 100, 58, 79, 90, 80, 117, 160, 185, 210, 185, 194],
+             }]
+           },
+           options: {
+             scales: {
+               y: {
+                 beginAtZero: true
+               }
+             }
+           }
+         });
+      </script>
+      <script>
+         WebFont.load({
+           custom: {
+             families: ["Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"],
+             urls: ["assets/css/fonts.min.css"],
+           },
+           active: function() {
+             sessionStorage.fonts = true;
+           },
+         });
+         var openSidebar = false;
+         
+         function changeSidebarState() {
+           openSidebar = !openSidebar;
+           if (openSidebar) {
+             document.getElementById('mainSidebarSection').classList.add('sidebar-close');
+           } else {
+             document.getElementById('mainSidebarSection').classList.remove('sidebar-close');
+           }
+         }
+         
+         function showMenu() {
+           var ele = document.getElementById('listSectionForReports');
+           if (ele.style.display == 'block') {
+             ele.style.display = 'none';
+             document.getElementById('arrow-transform').style.transform = 'rotate(0deg)';
+           } else {
+             ele.style.display = 'block';
+             document.getElementById('arrow-transform').style.transform = 'rotate(180deg)';
+           }
+         }
+         
+         function showMenu2() {
+           var ele = document.getElementById('listSectionForReportss');
+           if (ele.style.display == 'block') {
+             ele.style.display = 'none';
+             document.getElementById('arrow-transforms').style.transform = 'rotate(0deg)';
+           } else {
+             ele.style.display = 'block';
+             document.getElementById('arrow-transforms').style.transform = 'rotate(180deg)';
+           }
+         }
+         var myMultipleLineChart = new Chart(multipleLineChart, {
+           type: "line",
+           data: {
+             labels: ["Morning", "Mid Day", "Evening", ],
+             datasets: [{
+               label: "Traffic",
+               borderColor: "#1d7af3",
+               backgroundColor: "transparent",
+               data: [0, 1, 2, 3],
+               pointBorderColor: "#FFF",
+               pointBackgroundColor: "#1d7af3",
+               pointBorderWidth: 2,
+               pointHoverRadius: 4,
+               pointHoverBorderWidth: 1,
+               pointRadius: 4,
+               fill: true,
+               borderWidth: 2,
+             }],
+           },
+           options: {
+             responsive: true,
+             maintainAspectRatio: false,
+             legend: {
+               position: "top",
+             },
+             tooltips: {
+               bodySpacing: 4,
+               mode: "nearest",
+               intersect: 0,
+               position: "nearest",
+               xPadding: 10,
+               yPadding: 10,
+               caretPadding: 10,
+             },
+             layout: {
+               padding: {
+                 left: 15,
+                 right: 15,
+                 top: 15,
+                 bottom: 15
+               },
+             },
+             scales: {
+               x: {
+                 position: 'top'
+               },
+               y: {
+                 ticks: {
+                   callback: function(value, index, ticks) {
+                     if (value == 0) return 'Processed';
+                     if (value == 1) return 'Returned';
+                     if (value == 2) return 'Rejected';
+                     if (value == 3) return 'NAK'
+                   },
+                   autoSkip: false
+                 },
+                 grid: {
+                   display: true, // Shows the grid lines
+                   drawBorder: false, // Hides the border
+                   color: 'rgba(255, 99, 132, 0.2)', // Color of grid lines
+                   lineWidth: 1, // Width of grid lines
+                   borderDash: [5, 30], // Dashed grid lines, if desired
+                 },
+               }
+             },
+             plugins: {
+               legend: {
+                 display: false
+               }
+             }
+           },
+         });
+         var myMultipleBarChart = new Chart(multipleBarChart, {
+           type: 'bar',
+           data: {
+             labels: ['0', '200', '400', '600', '800'],
+             datasets: [{
+               label: "First time visitors",
+               backgroundColor: "#59d05d",
+               borderColor: "#59d05d",
+               data: [-3, -10, -18, -24, -10],
+             }, {
+               label: "Visitors",
+               backgroundColor: "#fdaf4b",
+               borderColor: "#fdaf4b",
+               data: [-10, -20, -13, -18, -4],
+             }, {
+               label: "Pageview",
+               backgroundColor: "#177dff",
+               borderColor: "#177dff",
+               data: [5, 2, 15, 24, 12, 6, 12],
+             }, ],
+           },
+           options: {
+             plugins: {
+               legend: {
+                 display: false
+               }
+             },
+             scales: {
+               x: {
+                 position: 'top',
+                 grid: {
+                   display: false
+                 }
+               },
+               y: {
+                 ticks: {
+                   callback: function(value, index, ticks) {
+                     // Custom labels based on the value (nagative value for the chart)
+                     if (value >= -24 && value <= -21) return '9 PM - 12 AM';
+                     if (value > -21 && value <= -18) return '6 PM - 9 PM';
+                     if (value > -18 && value <= -15) return '3 PM - 6 PM';
+                     if (value > -15 && value <= -12) return '12 PM - 3 PM';
+                     if (value > -12 && value <= -9) return '9 AM - 12 PM';
+                     if (value > -9 && value <= -6) return '6 AM - 9 AM';
+                     if (value > -6 && value <= -3) return '3 AM - 6 AM';
+                     if (value > -3 && value <= 0) return '12 AM - 3 AM';
+                     if (value < -24) return 'MIN';
+                     // (positive value for the chart)
+                     if (value > 0 && value <= 3) return '0 AM - 3 AM';
+                     if (value > 3 && value <= 6) return '3 AM - 6 AM';
+                     if (value > 6 && value <= 9) return '6 AM - 9 AM';
+                     if (value > 9 && value <= 12) return '9 AM - 12 PM';
+                     if (value > 12 && value <= 15) return '12 PM - 3 PM';
+                     if (value > 15 && value <= 18) return '3 PM - 6 PM';
+                     if (value > 18 && value <= 21) return '6 PM - 9 PM';
+                     if (value > 21 && value <= 24) return '9 PM - 12 AM';
+                     return 'MAX'; // Return empty string for values outside defined ranges
+                   },
+                   beginAtZero: true,
+                   autoSkip: false
+                 }
+               }
+             }
+           }
+         });
+      </script>
+      <script type="text/javascript">
+         $(function() {
+           var start = moment().subtract(29, "days");
+           var end = moment();
+         
+           function cb(start, end) {
+             $("#reportrange span").html(start.format("MMMM D, YYYY") + " - " + end.format("MMMM D, YYYY"));
+           }
+           $("#reportrange").daterangepicker({
+             startDate: start,
+             endDate: end,
+             ranges: {
+               Today: [moment(), moment()],
+               Yesterday: [moment().subtract(1, "days"), moment().subtract(1, "days")],
+               "Last 7 Days": [moment().subtract(6, "days"), moment()],
+               "Last 30 Days": [moment().subtract(29, "days"), moment()],
+               "This Month": [moment().startOf("month"), moment().endOf("month")],
+               "Last Month": [moment().subtract(1, "month").startOf("month"), moment().subtract(1, "month").endOf("month")],
+             },
+           }, cb);
+           cb(start, end);
+         });
+      </script>
+   </body>
 </html>
